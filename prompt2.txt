@@ -1,0 +1,95 @@
+Act as a **Creative Front-end Developer** and **UI/UX Specialist**.
+
+ช่วยเขียนโค้ดเว็บไซต์ **Portfolio ส่วนตัว** ให้มีความสวยงามระดับ **High-End Professional**
+โดยใช้เทคโนโลยี: **HTML5, CSS3, และ JavaScript (Vanilla)** เท่านั้น
+
+**โจทย์สำคัญ (Design Requirements):**
+ฉันต้องการงานออกแบบที่เน้น **"Lighting & Depth"** (แสงและมิติ)
+1. **Gradient Text:** ชื่อและจุดสำคัญต้องมีการไล่สีตัวอักษร (Text Gradient)
+2. **Glow Effects:** ต้องมีการใช้ `box-shadow` แบบฟุ้งๆ เพื่อสร้างแสงเรืองรอง (Ambient Glow) หลังรูปภาพและปุ่ม
+3. **Glassmorphism:** พื้นหลังการ์ดหรือ Navbar ต้องมีความโปร่งแสงและเบลอ (Backdrop Filter)
+4. **Smooth Transitions:** ทุกการขยับ (Hover) ต้องนุ่มนวล
+
+**1. การตั้งค่าดีไซน์ (Design & Theme):**
+* **Theme:** Deep Dark Theme (พื้นหลังสีน้ำเงินเข้มเกือบดำ)
+* **CSS Variables (`:root`):**
+    * `--bg-color`: #0f0c29 (หรือ Deep Navy)
+    * `--text-color`: #ffffff
+    * `--primary-gradient`: linear-gradient(to right, #8b5cf6, #3b82f6) (ไล่สีม่วงไปฟ้า)
+    * `--secondary-color`: #a855f7 (สีม่วงนีออน)
+    * `--card-bg`: rgba(255, 255, 255, 0.05) (สำหรับ Glass Effect)
+* **Font:** Google Fonts 'Kanit' หรือ 'Prompt' (น้ำหนักหลากหลาย Light, Regular, Bold)
+
+**2. โครงสร้างหน้าเว็บ:**
+
+**ส่วนที่ 1: Navbar**
+* Sticky Top, พื้นหลังโปร่งและเบลอ (`backdrop-filter: blur(10px)`)
+* โลโก้: ข้อความไล่สี (Gradient Text)
+* เมนู: Home, About, Skills, Projects, Certificates, Activities, Contact
+
+**ส่วนที่ 2: Hero Section (จุดขายสำคัญ)**
+* **Layout:** Flexbox/Grid แบ่ง 2 ฝั่ง (Desktop) / ซ้อนกัน (Mobile)
+* **ฝั่งซ้าย (Text):**
+    * พาดหัวใหญ่: "สวัสดีครับ, ผมชื่อ" (สีขาวปกติ)
+    * **ชื่อจริง:** "[ชื่อภาษาอังกฤษของคุณ]" <-- **ต้องใช้ Gradient Text ไล่สีม่วง-ฟ้า ตัวใหญ่หนา**
+    * คำรอง (Typing Effect): "Computer Science Student | Web Developer"
+    * ปุ่ม Action:
+        * ปุ่ม 1 (Primary): พื้นหลัง Gradient, มีเงาเรืองแสง (`box-shadow`) สีเดียวกับปุ่ม
+        * ปุ่ม 2 (Secondary): พื้นหลังโปร่ง เส้นขอบบางๆ (Outline)
+* **ฝั่งขวา (Image):**
+    * รูปโปรไฟล์: วงกลม หรือ สี่เหลี่ยมมุมมน
+    * **Effect พิเศษ:** สร้าง **"Ambient Glow"** ด้านหลังรูปภาพ โดยใช้ `box-shadow` ขนาดใหญ่และเบลอมาก (เช่น `0 0 60px rgba(139, 92, 246, 0.5)`) เพื่อให้รูปดูลอยออกมาจากพื้นหลัง
+
+**ส่วนที่ 3: เกี่ยวกับฉัน (About Me)**
+* **Layout:** แบ่ง 2 ฝั่ง (Text / Stats)
+* **Styling:** ใช้ Grid จัดวางให้สวยงาม
+* **Content:**
+    * ข้อมูลการศึกษา: คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุดรธานี
+    * ข้อมูลความสนใจ: Web Development, Full Stack
+    * เป้าหมาย: สร้างสรรค์แอปพลิเคชันที่มีประสิทธิภาพ
+* **Stats Cards (ขวามือ):** การ์ดตัวเลข (2+, 10+, 100%)
+    * **Design:** พื้นหลังแบบ Glassmorphism (ใสๆ) + ขอบบางๆ
+    * **Number:** ตัวเลขขนาดใหญ่ สี Gradient
+
+**ส่วนที่ 4: ทักษะ (Skills)**
+* Grid Layout
+* **Design:** การ์ดสีเข้ม เมื่อ Hover ให้มีแสงเรือง (Glow) สีตามเทคโนโลยีนั้นๆ
+
+**ส่วนที่ 5: ผลงาน (Projects)**
+* Grid Layout
+* **Card Design:**
+    * ภาพปกชัดเจน
+    * เนื้อหาอยู่ด้านล่าง
+    * **Hover Effect:** การ์ดลอยขึ้น (`transform: translateY(-10px)`) พร้อมเงาที่เข้มขึ้น
+
+**ส่วนที่ 6: เกียรติบัตรและกิจกรรม (Certificates & Activities)**
+* รวมไว้ในส่วนเดียวกันหรือแยกหัวข้อย่อยได้
+* ใช้ Layout แบบ Grid หรือ Horizontal Scroll ที่สวยงาม
+
+**ส่วนที่ 7: ข้อมูลติดต่อ (Contact Me) *[ส่วนที่เน้นพิเศษ]* **
+* **Concept:** "Connect with Me"
+* **Layout:** Grid หรือ Flexbox จัดกึ่งกลาง (Center Aligned)
+* **Elements:** สร้าง **"Contact Cards"** แยกตามช่องทาง (Facebook, GitHub, Email, Phone)
+* **Card Design:**
+    * **Shape:** สี่เหลี่ยมมุมมน (Rounded styling)
+    * **Background:** Glassmorphism (พื้นหลังโปร่งแสง เบลอๆ `backdrop-filter: blur(10px)`)
+    * **Icon:** ไอคอนขนาดใหญ่ (ใช้ FontAwesome หรือ SVG) ที่มีการไล่สี (Gradient Icon)
+    * **Text:** แสดงชื่อ Facebook / Email / เบอร์โทร ให้ชัดเจน
+* **Interactive Lighting (สำคัญ):**
+    * เมื่อเอาเมาส์ชี้ (Hover) ที่การ์ดไหน ให้การ์ดนั้น **"เรืองแสง" (Glow)** ด้วยสีประจำแอปนั้นๆ
+    * ตัวอย่าง:
+        * Facebook -> Glow สีน้ำเงิน (#1877F2)
+        * GitHub -> Glow สีขาว/เทา (#ffffff)
+        * Email -> Glow สีทองหรือส้ม (#f59e0b)
+        * Phone -> Glow สีเขียว (#10b981)
+    * Effect: การ์ดลอยขึ้นเล็กน้อย (`transform: translateY(-5px)`)
+
+**ส่วนที่ 8: Footer**
+* Copyright text
+* Social Icons (เล็กๆ สำหรับย้ำอีกที)
+
+**Code Requirements:**
+* **CSS Variables:** แยกสีของแต่ละ Platform ไว้ใน `:root` เพื่อให้แก้สี Glow ได้ง่าย
+* **Responsive:** บนมือถือให้เรียงการ์ดเป็นแนวตั้ง (Stack) หรือ Grid 2 คอลัมน์
+
+ขอโค้ดครบ 3 ไฟล์ (`index.html`, `style.css`, `script.js`)
